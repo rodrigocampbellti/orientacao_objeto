@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO   2.1</title>
+</head>
+<body>
+    <script>
+
+//Classe que define usuários.
+class User {
+
+//Atributos privados
+#name = "";
+#email = "";
+#password = "";
+
+// Métodos 'set'
+// 'this' faz referência ao próprio objeto.
+setName(name) {
+    this.#name = name;
+}
+
+setEmail(email_address) {
+
+// Valida e-mail
+if (email_address.indexOF('@') > 0)
+this.#email = email_address;
+else
+console.error('E-mail invalido!');
+    
+}
+
+setPassword(x) {
+    this.#password = x;
+
+    if(this.#testaSenha (x))
+    this.#password = x;
+    else
+    console.log('A senha tem que ter "_"');
+}
+
+// Método privado que testa a senha.
+#testaSenha (pass_word) {
+if (pass_word.indexOf('_') >= 0)
+return true;
+else {
+return false; 
+}
+}
+
+}
+
+// cria uma instância de 'User'.
+
+let joca = new User ();
+
+// define/altera atributos.
+
+joca.setName  ('joca da silva');
+joca.setEmail ('joca@silva.com');
+joca.setPassword ('123abc');
+// exibir o objeto.
+console.log(joca);
+
+ // Cria uma nova instância.
+ var secretaria = new User();
+
+// Atribuir...
+secretaria.setName('Marineuza Siriliano');
+secretaria.setEmail('mari@siri.com');
+secretaria.trocaSenha('asd_fgh');
+
+// Consumir.
+console.log('secretaria :', secretaria);
+
+    </script>
+
+
+</body>
+</html>
