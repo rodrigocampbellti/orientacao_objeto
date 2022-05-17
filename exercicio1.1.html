@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 1.1</title>
+  </head>
+  <body>
+    <h1>Exercício 1.1</h1>
+    <ul>
+      <li>Crie uma classe que defina frutas de qualquer tipo;</li>
+      <li>Crie os atributos comuns para todas as frutas deste tipo;</li>
+      <li>Os atributos devem ser privados;</li>
+      <li>
+        Crie 'getters' e 'setters' para todos os atributos que você definir;
+      </li>
+      <li>Crie pelo menos 2 objetos instanciando a classe;</li>
+      <li>Defina os atributos do novo objeto usando os 'setters';</li>
+      <li>Exiba o objeto no console do JavaScript;</li>
+      <li>
+        Exiba pelo menos dois atributos no documento, usando os 'getters'.
+      </li>
+    </ul>
+
+    <script>
+      class Fruit {
+        #big;
+        #color;
+        #sweet;
+        #juicy;
+
+        setBig(fruitNewBig) {
+          fruitNewBig = fruitNewBig;
+          this.#big = fruitNewBig;
+        }
+
+        setColor(fruitNewColor) {
+            fruitNewColor = fruitNewColor;
+            this.#color = fruitNewColor;
+        }
+
+        setSweet (fruitNewSweet){
+            fruitNewSweet = fruitNewSweet;
+            this.#sweet = fruitNewSweet;
+        }
+
+        setJuicy (fruitNewJuicy) {
+            fruitNewJuicy = fruitNewJuicy;
+            this.#juicy = fruitNewJuicy;
+        } 
+
+    getBig () {
+        return this.#big
+    }
+
+    getColor () {
+       return this.#color
+    }
+
+    getSweet (){
+     return this.#sweet
+    }
+
+    getJuicy () {
+return this.#juicy
+    }
+
+      }
+var feira = new Fruit ();
+feira.setBig ('very big');
+feira.setColor ('yellow');
+feira.setSweet ('too sweetie');
+feira.setJuicy ('gives too much juice');
+console.log (feira);
+
+document.write(`Vamos fazer uma feira: ${feira.getJuicy ()}`);
+document.write (`Eu quero uma fruta diferente: ${feira.getColor ()}`);
+
+    </script>
+  </body>
+</html>

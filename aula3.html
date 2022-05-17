@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 3.1</title>
+</head>
+<body>
+    
+<script>
+
+//Class users
+class Users {
+
+    //atributos
+    #name = ' ';
+    #email;
+    #password;
+    #birh;
+
+    // Método construtor
+    constructor (userName, userEmail, userPassword) { 
+this.setName (userName);
+this.#email = userEmail;
+this.#password = userPassword;
+    }
+setName (userNewName) {
+
+/** aqui você deveria sanitizar e validar o nome do usuário
+*/
+
+userNewName = userNewName.trim();
+
+    this.#name = userNewName;
+}
+
+setEmail (userNewEmail) {
+// valide e sanitize
+    this.#email = userNewEmail;
+}
+
+setPassword (userNewPassword) {
+this.#password = userNewPassword;
+}
+
+
+//Setter para birth
+setBirth (date) {
+    this.#birh = date;
+}
+
+//getters - lê valores de atributos privados
+
+getName ()
+
+
+}
+
+// criando objeto
+
+var chefe = new Users ('Jeronimo', 'jero@nimo.com','123');
+
+//exibindo dados do objeto
+console.log(chefe);
+
+// define o atributo birth
+chefe.setBirth ('2000-10-14');
+
+// qual o nome de 'chefe'
+
+
+</script>
+
+
+</body>
+</html>
