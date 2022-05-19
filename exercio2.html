@@ -14,6 +14,63 @@
     <p><img src="0001.png" alt="Diagrama de classe"></p>
     <p>Teste a classe.</p>
 
+<script>
+
+class Carro {
+
+    // atributos da classe
+
+    #marca
+    #modelo
+    #cor
+    #ano
+
+setMarca (marca) {
+    this.#marca = marca;
+ }
+setModelo (modelo) { 
+    this.#modelo = modelo;
+ }
+setCor (cor) { 
+    this.#cor = cor;
+}
+setAno (ano) { 
+    this.#ano = ano;
+}
+
+getMarca ( ) { 
+    return this.#marca
+}
+getModelo ( ) { 
+    return this.#modelo
+}
+getCor ( ) { 
+    return this.#cor
+}
+getAno ( ) { 
+    return this.#ano
+}
+
+}
+
+// instância
+let monza = new Carro ();
+
+// Define atributos
+monza.setMarca ('Chevrolet');
+monza.setModelo ('rebaixado');
+monza.setCor ('Vermelho');
+monza.setAno ('1998');
+
+console.log('Monza: ', monza);
+
+document.write(`
+<p>Monza: </p>
+<ul>
+    <li>Marca: 
+`)
+</script>
+
 </body>
 
 </html>

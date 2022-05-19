@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            margin: 0;
+            padding: .5rem;
+        }
+    </style>
+    <title>Exercício 1.4</title>
+</head>
+
+<body>
+
+    <h1>Exercício 1.4</h1>
+    <p>Observe o diagrama de classes abaixo e reproduza-o usando JavaScript:</p>
+
+    <table>
+        <tr>
+            <th>Serie</th>
+        </tr>
+        <tr>
+            <td>
+                - titulo : string<br>
+                - lancamento : date<br>
+                - conclusao : date<br>
+                - temporadas : number<br>
+                - canal : string
+            </td>
+        </tr>
+        <tr>
+            <td>
+                + construtor(titulo) : void<br>
+                <br>
+                - setTitulo(titulo) : void<br>
+                + setLancamento(lancamento) : void<br>
+                + setConclusao(conclusao) : void<br>
+                + setTemporadas(temporadas) : void<br>
+                + setCanal(canal) : void<br>
+                <br>
+                + getTitulo() : string<br>
+                + getLancamento() : string<br>
+                + getConclusao() : string<br>
+                + getTemporadas() : string<br>
+                + getCanal() : string<br>
+            </td>
+        </tr>
+    </table>
+
+    <p>Teste a classe.</p>
+
+    <script>
+
+        class Serie {
+
+            #titulo
+            #lancamento
+            #conclusao
+            #temporadas
+            #canal
+
+            constructor(titulo) { this.#setTitulo(titulo); }
+
+            #setTitulo(titulo) { this.#titulo = titulo; }
+            setLancamento(lancamento) { this.#lancamento = lancamento; }
+            setConclusao(conclusao) { this.#conclusao = conclusao; }
+            setTemporadas(temporadas) { this.#temporadas = temporadas; }
+            setCanal(canal) { this.#canal = canal; }
+
+            getTitulo() { return this.#titulo; }
+            getLancamento() { return this.#lancamento; }
+            getConclusao() { return this.#conclusao; }
+            getTemporadas() { return this.#temporadas; }
+            getCanal() { return this.#canal; }
+
+        }
+
+        let TWD = new Serie('The Walking Dead')
+        TWD.setLancamento('2016')
+        TWD.setConclusao('em andamento')
+        TWD.setTemporadas('200')
+        TWD.setCanal('Fox')
+
+        console.log(TWD);
+
+    </script>
+
+</body>
+
+</html>

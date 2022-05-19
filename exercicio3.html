@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
+
+    <title>Exercício 1.3</title>
+</head>
+
+<body>
+
+    <h1>Exercício 1.3</h1>
+    <ul>
+        <li>Crie uma classe para definir animais de estimação;</li>
+        <li>Crie os atributos comuns para todos os animais deste tipo;</li>
+        <li>Os atributos devem ser privados;</li>
+        <li>Crie 'getters' e 'setters' para todos os atributos que você definir;</li>
+        <li>Crie um 'construtor' que receba os atributos mais importantes;</li>
+        <li>Crie pelo menos 2 objetos instanciando a classe;</li>
+        <li>Defina os atributos dos novos objetos usando os 'setters';</li>
+        <li>Exiba o objeto no console do JavaScript;</li>
+        <li>Exiba pelo menos dois atributos no documento, usando os 'getters'.</li>
+        <li>Crie o diagrama de classe para esta classe.</li>
+    </ul>
+
+    <script>
+
+        class Animal {
+
+            #nome
+            #especie
+            #dieta
+
+            constructor(nome, especie) {
+                this.setNome(nome);
+                this.setEspecie(especie);
+            }
+
+            getNome() { return this.#nome; }
+            getEspecie() { return this.#especie; }
+            getDieta() { return this.#dieta; }
+
+            setNome(nome) { this.#nome = nome; }
+            setEspecie(especie) { this.#especie = especie; }
+            setDieta(dieta) { this.#dieta = dieta; }
+
+        }
+
+        let urso = new Animal('Teddy', 'pardo');
+        let zebra = new Animal('Listrinha', 'listrada');
+
+        urso.setDieta('onívoro');
+        zebra.setDieta('herbívoro');
+
+        console.log('Urso: ', urso);
+        console.log('Zebra: ', zebra);
+
+        document.write(`
+
+<h4>Urso:</h4>
+<ul>
+    <li>${urso.getNome()}</li>
+    <li>${urso.getEspecie()}</li>
+    <li>${urso.getDieta()}</li>
+</ul>
+
+<h4>Zebra:</h4>
+<ul>
+    <li>${zebra.getNome()}</li>
+    <li>${zebra.getEspecie()}</li>
+    <li>${zebra.getDieta()}</li>
+</ul>
+        
+        `);
+
+    </script>
+
+</body>
+
+</html>
