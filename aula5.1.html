@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
+    <title>Exercício 2.1</title>
+</head>
+
+<body>
+
+    <h1>Exercício 2.1</h1>
+    Crie as classes necessárias:
+    <ul>
+        <li>A classe "Serie" define os atributos, getters e setters comuns para todas as séries;</li>
+        <li>O atributo "titulo" deve ser inserido na instância da classe (construtor);</li>
+        <li>A classe "Comédia" define atributos, getters e setters comuns para esse tipo de série, herdando a classe
+            "Serie";</li>
+        <li>A classe "Suspense" define atributos, getters e setters comuns para esse tipo de série, herdando a classe
+            "Serie";</li>
+        <li>A classe "SyFy" define atributos, getters e setters comuns para esse tipo de série, herdando a classe
+            "Serie";</li>
+        <li>Crie um objeto para cada tipo de classe "filha" para testar.</li>
+    </ul>
+
+
+<script>
+
+class Serie {
+
+#titulo
+#lancamento
+#temporada
+#lingua
+
+constructor (titulo, lancamento, temporada,) {this.setTitulo(titulo); this.setLancamento(lancamento); this.setTemporada (temporada); this.setLingua (lingua);}
+
+setTitulo (titulo) {this.#titulo = titulo}
+
+getTitulo () {return this.#titulo}
+
+etTLancamento (lancamento) {this.#lancamento = lancamento}
+
+getLancamento () {return this.#lancamento}
+
+etTitulo (titulo) {this.#titulo = titulo}
+
+getTitulo () {return this.#titulo}
+
+etTitulo (titulo) {this.#titulo = titulo}
+
+getTitulo () {return this.#titulo}
+
+}
+
+class Comedia extends Serie {
+
+    #comediaComDrama
+    #comediaRomantica
+
+    constructor (atributo, comediaComDrama, comediaRomantica){
+    super(atributo)
+
+this.setComediaComDrama(comediaComDrama); this.setComediaRomantica (comediaRomantica);
+}
+
+setComediaComDrama(comediaComDrama) {this.#comediaComDrama = comediaComDrama}
+
+getComediaComDrama () {return this.#comediaComDrama}
+
+
+setComediaRomantica(comediaRomantica) {this.#comediaRomantica = comediaRomantica}
+
+getComediaRomantica() {return this.#comediaRomantica}
+
+}
+
+var internacional = new Comedia ('Friends', 'Sim', 'Nao')
+console.log (internacional)
+
+class Suspense extends Serie {
+
+    #slasher
+    #horror
+
+    constructor (titulo, slasher, horror) {
+        super (titulo)
+        this.setSlasher(slasher); this.setHorror(horror)
+    }
+setSlasher(slasher) {this.#slasher = slasher}
+getSlasher () {return this.#slasher}
+
+setHorror (horror) {this.#horror = horror}
+getHorror () { return this.#horror}
+
+}
+
+var anos80 = new Suspense ('O Iluminado', 'Sim', 'Nao')
+
+console.log (anos80)
+
+
+class SyFy { 
+
+    #efeitosEspeciais
+    
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

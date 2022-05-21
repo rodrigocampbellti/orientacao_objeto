@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 5.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Produto {
+
+            #origem
+            #preco
+            #marca
+            #codigo
+            #descricao
+
+            constructor(codigo, origem, marca) { this.setCodigo(codigo); this.setOrigem(origem); this.setMarca(marca); }
+
+            setOrigem(origem) { this.#origem = origem }
+            setPreco(preco) { this.#preco = preco }
+            setMarca(marca) { this.#marca = marca }
+            setCodigo(codigo) { this.#codigo = codigo }
+            setDescricao(descricao) { this.#descricao = descricao }
+
+            getOrigem() { return this.#origem }
+            getPreco() { return this.#preco }
+            getMarca() { return this.#marca }
+            getCodigo() { return this.#codigo }
+            getDescricao() { return this.#descricao }
+
+        }
+
+        class Vestuario extends Produto {
+
+            #tipo
+            #tamanho
+            #cor
+
+            constructor(codigo, tipo, tamanho) {
+                super(codigo) // Executar o construtor da classe pai                
+                this.setTipo(tipo)
+            }
+
+            setTipo(tipo) { this.#tipo = tipo }
+            setTamanho(tamanho) { this.#tamanho = tamanho }
+            setCor(cor) { this.#cor = cor }
+
+            getTipo() { return this.#tipo }
+            getTamanho() { return this.#tamanho }
+            getCor() { return this.#cor }
+
+        }
+
+        class Calca extends Vestuario {
+
+        }
+
+class Alimentos extends Produto {
+
+    #letal
+
+constructor (codigo,origem, marca, letal) {
+super(codigo, origem,marca)
+
+this.setLetal (letal)
+}
+
+setLetal(letal) {this.#letal = letal}
+
+getCor () {return this.#letal}
+
+}
+
+var arroz = new Alimentos ('418156','China','Maximo', 'sim' )
+
+console.log (arroz)
+
+
+class Moveis extends Produto {
+   
+    #peso
+
+constructor (codigo,origem, marca, peso) {
+super(codigo, origem, marca)
+
+this.setPeso(peso) 
+}
+
+setPeso(peso) {this.#peso = peso+'jujuba'}
+
+getPeso () {return this.#peso}
+ 
+    
+}
+
+var cadeira = new Moveis ('418718','Polonia','Petropolis','500kg' )
+
+console.log(cadeira)
+
+        var bone = new Vestuario('B0N3', 'Chapéu')
+
+        var jeans = new Calca('CODIGO', 'longas')
+
+    
+
+    </script>
+
+</body>
+
+</html>
