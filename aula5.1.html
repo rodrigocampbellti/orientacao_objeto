@@ -38,50 +38,44 @@ class Serie {
 #temporada
 #lingua
 
-constructor (titulo, lancamento, temporada,) {this.setTitulo(titulo); this.setLancamento(lancamento); this.setTemporada (temporada); this.setLingua (lingua);}
+constructor (titulo, lancamento, temporada, lingua) {this.setTitulo(titulo); this.setLancamento(lancamento); this.setTemporada (temporada); this.setLingua (lingua);}
 
 setTitulo (titulo) {this.#titulo = titulo}
 
 getTitulo () {return this.#titulo}
 
-etTLancamento (lancamento) {this.#lancamento = lancamento}
+setLancamento (lancamento) {this.#lancamento = lancamento}
 
 getLancamento () {return this.#lancamento}
 
-etTitulo (titulo) {this.#titulo = titulo}
+setTemporada (temporada) {this.#temporada = temporada}
+getTemporada () {return this.#temporada}
 
-getTitulo () {return this.#titulo}
-
-etTitulo (titulo) {this.#titulo = titulo}
-
-getTitulo () {return this.#titulo}
+setLingua (lingua) {this.#lingua = lingua}
+getLingua () {return this.#lingua}
 
 }
 
 class Comedia extends Serie {
 
-    #comediaComDrama
-    #comediaRomantica
+    #tipo
 
-    constructor (atributo, comediaComDrama, comediaRomantica){
-    super(atributo)
+    constructor (titulo, lancamento, temporada, lingua,tipo){
+    super(titulo, lancamento, temporada, lingua)
 
-this.setComediaComDrama(comediaComDrama); this.setComediaRomantica (comediaRomantica);
+this.setTipo(tipo)
 }
 
-setComediaComDrama(comediaComDrama) {this.#comediaComDrama = comediaComDrama}
+setTipo(tipo) {this.#tipo = tipo}
 
-getComediaComDrama () {return this.#comediaComDrama}
+getTipo () {return this.#tipo}
 
-
-setComediaRomantica(comediaRomantica) {this.#comediaRomantica = comediaRomantica}
-
-getComediaRomantica() {return this.#comediaRomantica}
 
 }
 
-var internacional = new Comedia ('Friends', 'Sim', 'Nao')
-console.log (internacional)
+var Friends = new Comedia ('Friends', '1998', '10', 'Inglês','Comedia de amigos')
+console.log (Friends)
+
 
 class Suspense extends Serie {
 
